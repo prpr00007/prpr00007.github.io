@@ -38,13 +38,27 @@ window.SITE = {
       label: "Projects",
       items: [
         {
+          label: "Kalshi Bot",
+          text: `
+            <h2>Kalshi RFQ Market Maker</h2>
+            <p>An automated market maker for multi-leg combo contracts on Kalshi, a CFTC-regulated exchange. It reads every quote request on the exchange, prices the non-sports combos, and confirms fills inside Kalshi's 3-second window.</p>
+            <p>Crypto coins move together, so multiplying leg prices badly misprices baskets. The bot uses a Gaussian copula fitted on 43,000+ settled 15-minute windows, with 100,000-path Monte Carlo at about 2 ms per request.</p>
+            <p>An async engine re-prices on acceptance and confirms in a median of 49 ms. Layered risk limits, a kill switch and reconciliation with the exchange every 30 seconds keep it safe.</p>
+            <p>It went through historical replay, locked-policy shadow quoting and live paper trading before a small live pilot. CI runs unit tests and a replay of real recorded feed on every push.</p>
+            <p><b>Stack:</b> Python, asyncio, NumPy, SQLite, Docker, Prometheus, Grafana</p>
+            <p><a href="https://github.com/prpr00007/kalshi-rfq-bot-writeup" target="_blank" rel="noopener">Read the write-up →</a></p>
+          `,
+        },
+        {
           label: "Scriptiq",
           text: `
             <h2>Scriptiq</h2>
-            <p>An end-to-end localization pipeline for manga, manhwa and manhua. It detects speech bubbles, extracts and translates the text, and re-renders the translation back into the original artwork, with manual review at every step.</p>
-            <p>Text extraction combines manga-ocr, EasyOCR and OpenCV; translation runs on Llama 4 Scout via the Groq API. Tested with two scanlation teams.</p>
-            <p><b>Stack:</b> Python, FastAPI, React, Vite, Fabric.js, OpenCV</p>
-            <p><a href="https://github.com/prpr00007/Scriptiq" target="_blank" rel="noopener">View on GitHub →</a></p>
+            <p>A full-stack tool for translating manga into English. It finds the speech bubbles, reads the Japanese, translates with a vision LLM that sees the whole page, and typesets the English back into the art.</p>
+            <p>The model works out who is speaking in each bubble and keeps a memory of each series: characters, glossary and running jokes, so names and voices stay consistent.</p>
+            <p>OpenCV grows each narrow Japanese text box out to the real bubble outline, so the English fits the bubble instead of a thin column.</p>
+            <p>A React editor lets you fix every step, and whole chapters translate and download as a zip.</p>
+            <p><b>Stack:</b> Python, FastAPI, OpenCV, EasyOCR, manga-ocr, Claude, React, Docker</p>
+            <p><a href="https://github.com/prpr00007/scriptiq-writeup" target="_blank" rel="noopener">Read the write-up →</a></p>
           `,
         },
         {
