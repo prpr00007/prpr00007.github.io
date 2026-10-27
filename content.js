@@ -57,6 +57,7 @@ window.SITE = {
             <p>The model works out who is speaking in each bubble and keeps a memory of each series: characters, glossary and running jokes, so names and voices stay consistent.</p>
             <p>OpenCV grows each narrow Japanese text box out to the real bubble outline, so the English fits the bubble instead of a thin column.</p>
             <p>A React editor lets you fix every step, and whole chapters translate and download as a zip.</p>
+            <p>93% text-extraction accuracy across 1,000+ pages, tested with 2 translation teams.</p>
             <p><b>Stack:</b> Python, FastAPI, OpenCV, EasyOCR, manga-ocr, Claude, React, Docker</p>
             <p><a href="https://github.com/prpr00007/scriptiq-writeup" target="_blank" rel="noopener">Read the write-up →</a></p>
           `,
